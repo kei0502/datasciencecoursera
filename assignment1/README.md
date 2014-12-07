@@ -1,4 +1,4 @@
-datasciencecoursera
+编程作业1：空气污染
 ===================
 ## 第一部分
 编写名为“pollutantmean”的函数，计算指定列表中的所有监测点的污染物（硫酸盐或硝酸盐）平均值。函数“pollutantmean”有三个参数：“directory”、“pollutant”和“id”。如果指定向量监测点的ID编号，那么“pollutantmean”会从“directory”参数中指定的目录下读取监测点的颗粒物数据，并返回所有监测点的污染物平均值，忽略代码为NA的任何缺失值。
