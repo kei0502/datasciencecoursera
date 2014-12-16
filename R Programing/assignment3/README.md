@@ -11,8 +11,7 @@ The Hospital Compare web site contains a lot of data and we will only look at a 
 ### 1 Plot the 30-day mortality rates for heart attack
 
 Read the outcome data into R via the read.csv function and look at the first few rows.
-<pre><code>
-&gt; outcome &lt;- read.csv("outcome-of-care-measures.csv", colClasses = "character")
+<pre><code>&gt; outcome &lt;- read.csv("outcome-of-care-measures.csv", colClasses = "character")
 &gt; head(outcome)
 </code></pre>
 There are many columns in this dataset. You can see how many by typing ncol(outcome) (you can see the number of rows with the nrow function). In addition, you can see the names of each column by typing names(outcome) (the names are also in the PDF document.
@@ -32,8 +31,7 @@ Write a function called best that take two arguments: the 2-character abbreviate
 Handling ties. If there is a tie for the best hospital for a given outcome, then the hospital names should be sorted in alphabetical order and the first hospital in that set should be chosen (i.e. if hospitals “b”, “c”, and “f” are tied for best, then hospital “b” should be returned).
 
 The function should use the following template.
-<pre><code>
-best <- function(state, outcome) {
+<pre><code>best &lt;- function(state, outcome) {
 
 }
 </code></pre>
@@ -62,8 +60,7 @@ Write a function called rankall that takes two arguments: an outcome name (outco
 Handling ties. The rankall function should handle ties in the 30-day mortality rates in the same way that the rankhospital function handles ties.
 
 The function should use the following template.
-<pre><code>
-rankall &lt;- function(outcome, num = "best") {
+<pre><code>rankall &lt;- function(outcome, num = "best") {
 
 }
 </code></pre>
