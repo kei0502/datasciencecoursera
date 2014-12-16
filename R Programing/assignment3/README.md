@@ -12,15 +12,15 @@ The Hospital Compare web site contains a lot of data and we will only look at a 
 
 Read the outcome data into R via the read.csv function and look at the first few rows.
 <pre><code>
-> outcome <- read.csv("outcome-of-care-measures.csv", colClasses = "character")
-> head(outcome)
+&gt; outcome &lt;- read.csv("outcome-of-care-measures.csv", colClasses = "character")
+&gt; head(outcome)
 </code></pre>
 There are many columns in this dataset. You can see how many by typing ncol(outcome) (you can see the number of rows with the nrow function). In addition, you can see the names of each column by typing names(outcome) (the names are also in the PDF document.
 To make a simple histogram of the 30-day death rates from heart attack (column 11 in the outcome dataset), run
 <pre><code>
-> outcome[, 11] <- as.numeric(outcome[, 11])
-> ## You may get a warning about NAs being introduced; that is okay
-> hist(outcome[, 11])
+&gt; outcome[, 11] &lt;- as.numeric(outcome[, 11])
+&gt; ## You may get a warning about NAs being introduced; that is okay
+&gt; hist(outcome[, 11])
 </code></pre>
 Because we originally read the data in as character (by specifying colClasses = "character" we need to coerce the column to be numeric. You may get a warning about NAs being introduced but that is okay.
 There is nothing to submit for this part.
@@ -48,7 +48,7 @@ Handling ties. It may occur that multiple hospitals have the same 30-day mortali
 
 The function should use the following template.
 <pre><code>
-rankhospital <- function(state, outcome, num = "best") {
+rankhospital &lt;- function(state, outcome, num = "best") {
 
 }
 </code></pre>
@@ -63,7 +63,7 @@ Handling ties. The rankall function should handle ties in the 30-day mortality r
 
 The function should use the following template.
 <pre><code>
-rankall <- function(outcome, num = "best") {
+rankall &lt;- function(outcome, num = "best") {
 
 }
 </code></pre>
