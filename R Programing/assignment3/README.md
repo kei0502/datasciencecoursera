@@ -16,8 +16,7 @@ Read the outcome data into R via the read.csv function and look at the first few
 </code></pre>
 There are many columns in this dataset. You can see how many by typing ncol(outcome) (you can see the number of rows with the nrow function). In addition, you can see the names of each column by typing names(outcome) (the names are also in the PDF document.
 To make a simple histogram of the 30-day death rates from heart attack (column 11 in the outcome dataset), run
-<pre><code>
-&gt; outcome[, 11] &lt;- as.numeric(outcome[, 11])
+<pre><code>&gt; outcome[, 11] &lt;- as.numeric(outcome[, 11])
 &gt; ## You may get a warning about NAs being introduced; that is okay
 &gt; hist(outcome[, 11])
 </code></pre>
@@ -32,7 +31,10 @@ Handling ties. If there is a tie for the best hospital for a given outcome, then
 
 The function should use the following template.
 <pre><code>best &lt;- function(state, outcome) {
+  ## Read outcome data
 
+  ## Check that state and outcome are valid
+  ## Return hospital name in that state with lowest 30-day death rate
 }
 </code></pre>
 
@@ -45,9 +47,12 @@ Write a function called rankhospital that takes three arguments: the 2-character
 Handling ties. It may occur that multiple hospitals have the same 30-day mortality rate for a given cause of death. In those cases ties should be broken by using the hospital name. For example, in Texas (“TX”), the hospitals with lowest 30-day mortality rate for heart failure are shown here.
 
 The function should use the following template.
-<pre><code>
-rankhospital &lt;- function(state, outcome, num = "best") {
+<pre><code>rankhospital &lt;- function(state, outcome, num = "best") {
+  ## Read outcome data
 
+  ## Check that state and outcome are valid
+  ## Return hospital name in that state with the given rank
+  ## 30-day death rate
 }
 </code></pre>
 
@@ -61,7 +66,11 @@ Handling ties. The rankall function should handle ties in the 30-day mortality r
 
 The function should use the following template.
 <pre><code>rankall &lt;- function(outcome, num = "best") {
-
+  ## Read outcome data
+  ## Check that state and outcome are valid
+  ## For each state, find the hospital of the given rank
+  ## Return a data frame with the hospital names and the
+  ## (abbreviated) state name
 }
 </code></pre>
 
